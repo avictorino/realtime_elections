@@ -1,5 +1,5 @@
 #### Summary
-The newsroom of my country's largest newspaper needs to process the election data in real-time. The electronic election model has a count of + 200 million votes in a few hours. The first media company that processes and displays the election result wins.
+The newsroom of the largest newspaper in my country needs to process the election data in real-time. The electronic election model has a count of + 200 million votes in a few hours. The first media company that processes and displays the election result wins.
 
 It will be necessary to read in real-time the data available by the government during the counting of mayor/councillors elections with +5000 cities and 250 million inhabitants. With update rates ranging from ten seconds to one minute for different data sessions, the system must be able to serve JSON for different pages and applications in real-time for +-200,000 clients connected simultaneously.
 
