@@ -1,0 +1,10 @@
+celery==4.4.7
+Flask==1.1.2
+flask-redis==0.4.0
+flower==0.9.5
+gunicorn==20.0.4
+python-dateutil==2.8.1
+python-dotenv==0.14.0
+redis==3.5.3
+python-slugify==4.0.1
+gevent==21.1.2

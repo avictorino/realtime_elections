@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+
+  flask:
+    build: ./
+    image: realtime-election
+    env_file:
+      - .env
+    command: gunicorn --bind 0.0.0.0:5020 web:flask_app --workers=5 --threads=2 --worker-class=gevent --worker-connections=1000
+    ports:
+      - 5020:5020
+
+  scheduler:
+    image: realtime-election
+    env_file:
+      - .env
+    command: celery -A task beat --loglevel=error
+
+  worker:
+    image: realtime-election
+    env_file:
+      - .env
+    command: celery -A task worker --loglevel=debug
+
+volumes:
+  redis_election_data:
