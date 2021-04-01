@@ -36,3 +36,7 @@ Install REDIS as your taste, replace the URL into the .env file, then:
     docker-compose build
     docker-compose up
     curl http://127.0.0.1:5020/cities/mayors-sp-sao-paulo.json
+
+Checkout github code project:
+[https://github.com/avictorino/realtime_elections!](https://github.com/avictorino/realtime_elections)
+ 
