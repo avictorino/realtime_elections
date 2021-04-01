@@ -16,6 +16,9 @@ This approach generated incalculable databases locks and records duplications. A
 * ClouldFront configuration in front of the request to decrease the live requests per seconds rate (isn´t included in this example) retaining more than 50% of the traffic.
 * It was tried to use put_object for S3, but the latency of boto3 was not as performant as Redis.MSET for uploading thousands of small files simultaneously.
 
+![arch](https://user-images.githubusercontent.com/1752695/113294499-6ecfdf80-92cd-11eb-8264-d1d80f5e4965.jpg)
+
+
 #### Repository architecture:
 I developed some microservices to spread the responsibility for this functionality. The Github repository version is just a simplified variation of the original solution, which uses a much larger data complexity.
 
