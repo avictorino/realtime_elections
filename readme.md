@@ -24,8 +24,9 @@ I developed some microservices to spread the responsibility for this functionali
 
 **task.py** Celery tasks being performed every 10 seconds reading the information from the file sent from the government (2MB) and slicing them into + -5000 dictionaries on REDIS. Another task running each minute to enrich the Redis with the session data released by the government on a different regularly time basis.
 
-** web.py ** Flask app behind CloudFront configured to keep the same version of the file for {cache-control: max-age 10}. When the request reaches the route/view the data is waiting in a high available REDIS key/value entry. 
-#####Gunicorn offer a nice performance otimization and helps a lot to serve 10.000 requests in parallel:
+**web.py** Flask app behind CloudFront configured to keep the same version of the file for {cache-control: max-age 10}. When the request reaches the route/view the data is waiting in a high available REDIS key/value entry.
+
+##### Gunicorn offer a nice performance otimization and helps a lot to serve 10.000 requests in parallel:
     
 The web application doesn't have any processing, together with the amazing gunicorn fine-tune, each large AWS instance can serve thousands of connections simultaneous.
     
